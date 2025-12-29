@@ -7,7 +7,7 @@ const TodoList = () => {
   return (
     <div>
       {todos.length === 0 && (
-        <p className="text-center text-gray-500">No todos yet</p>
+        <p>No todos yet</p>
       )}
       {todos.map(todo => (
         <TodoItem key={todo.id} todo={todo} />

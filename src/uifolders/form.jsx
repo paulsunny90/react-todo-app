@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useTodos } from "../context/todocontext.jsx";
+import { useTodos } from "../context/todocontext";
 
 const TodoForm = () => {
   const [text, setText] = useState("");
@@ -13,18 +13,19 @@ const TodoForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="flex gap-2 mb-4">
+        <form onSubmit={handleSubmit} >
       <input
         type="text"
         value={text}
         onChange={(e) => setText(e.target.value)}
         placeholder="Enter a todo..."
-        className="flex-1 border p-2 rounded"
+    
       />
-      <button className="bg-blue-500 text-white px-4 rounded">
+      <button>
         Add
       </button>
     </form>
+
   );
 };
 
