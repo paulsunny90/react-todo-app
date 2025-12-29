@@ -5,13 +5,15 @@ import Footer from "./uifolders/footer";
 
 const App = () => {
   return (
-    <div className="max-w-md mx-auto mt-10 p-4 border rounded shadow bg-fuchsia-500">
+      <div className="max-w-md mx-auto mt-10 p-4 border rounded shadow bg-fuchsia-500">
       <Header />
       <TodoForm />
       <TodoList />
       <Footer />
     </div>
+    
   );
 };
 
 export default App;
+

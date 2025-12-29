@@ -35,7 +35,7 @@ const TodoItem = ({ todo }) => {
         ) : (
           <button
             onClick={() => setIsEditing(true)}
-            className="bg-yellow-500 text-white px-2 rounded"
+            className="bg-violet-500 text-white px-2 rounded"
           >
             Edit
           </button>
