@@ -1,5 +1,5 @@
 import React from "react";
- import { createContext, useContext, useEffect, useState } from "react";
+import  { createContext, useContext, useEffect, useState }from "react"
 
 const TodoContext = createContext();
 
@@ -17,7 +17,11 @@ export const TodoProvider = ({ children }) => {
     setTodos([...todos, { id: Date.now(), text, completed: false }]);
   };
 
-}
+  const deleteTodo = (id) => {
+    setTodos(todos.filter(todo => todo.id !== id));
+  };
 
+  
+};
 
-
+export const useTodos = () => useContext(TodoContext);
