@@ -5,7 +5,7 @@ import Footer from "./uifolders/footer";
 
 const App = () => {
   return (
-    <div className="flex flex-col justify-items-center items-center">
+    <div className="max-w-md mx-auto mt-10 p-4 border rounded shadow bg-fuchsia-500">
       <Header />
       <TodoForm />
       <TodoList />

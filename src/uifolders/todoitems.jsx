@@ -13,7 +13,7 @@ const TodoItem = ({ todo }) => {
   };
 
   return (
-    <div className="flex justify-between items-center border p-2 mb-2 rounded">
+    <div className="flex justify-between items-center border p-2 mb-2 rounded w-full">
       {isEditing ? (
         <input
           value={text}
@@ -24,7 +24,7 @@ const TodoItem = ({ todo }) => {
         <span>{todo.text}</span>
       )}
 
-      <div className="flex gap-2">
+      <div className="flex gap-2 ">
         {isEditing ? (
           <button
             onClick={handleUpdate}
