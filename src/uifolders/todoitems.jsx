@@ -1,5 +1,6 @@
+
 import { useState } from "react";
-import { useTodos } from "../context/todocontext";
+import { useTodos } from "../context/todocontext.jsx";
 
 const TodoItem = ({ todo }) => {
   const { deleteTodo, updateTodo } = useTodos();
@@ -12,12 +13,12 @@ const TodoItem = ({ todo }) => {
   };
 
   return (
-    <div className="">
+    <div className="flex justify-between items-center border p-2 mb-2 rounded">
       {isEditing ? (
         <input
           value={text}
           onChange={(e) => setText(e.target.value)}
-          className=""
+          className="border p-1 flex-1 mr-2"
         />
       ) : (
         <span>{todo.text}</span>
@@ -27,26 +28,28 @@ const TodoItem = ({ todo }) => {
         {isEditing ? (
           <button
             onClick={handleUpdate}
-            className=""
+            className="bg-green-500 text-white px-2 rounded"
           >
             Save
           </button>
-        ):(
-            <button onClick={setIsEditing(true)}
-            className="">
-                Edite
-            </button>
-            
+        ) : (
+          <button
+            onClick={() => setIsEditing(true)}
+            className="bg-yellow-500 text-white px-2 rounded"
+          >
+            Edit
+          </button>
         )}
-            <button onClick={deleteTodo(id)}
-            className="">
-                delete
-            </button>
-        
+
+        <button
+          onClick={() => deleteTodo(todo.id)}
+          className="bg-red-500 text-white px-2 rounded"
+        >
+          Delete
+        </button>
       </div>
     </div>
   );
 };
 
 export default TodoItem;
-
